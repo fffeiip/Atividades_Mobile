@@ -7,6 +7,7 @@ import {
     TextInput
 } from 'react-native';
 import {Button} from 'react-native-elements'
+import { translate } from './locales'
 
 export default class GasolinaOuAlcool extends Component {
     constructor(props) {
@@ -18,18 +19,18 @@ export default class GasolinaOuAlcool extends Component {
     }
 
     calculaMelhor = () => {        
-        const alerta = parseFloat(this.state.textInputValueGasolina)*0.7>parseFloat(this.state.textInputValueAlcool)?"Álcool":"Gasolina"
+        const alerta = parseFloat(this.state.textInputValueGasolina)*0.7>parseFloat(this.state.textInputValueAlcool)?translate('etanol'):translate('gas')
         // Alert.alert("É melhor comprar um carro elétrico")
-        Alert.alert("É melhor abastecer com "+alerta)
+        Alert.alert(translate('msg_alert')+alerta)
     }
     render() {
         return (
             <View>
-                <Text>Gasolina</Text>
-                <TextInput onChangeText={textInputValueGasolina=>this.setState({textInputValueGasolina})} placeholder="Valor da Gasolina" keyboardType='numeric' style={styles.textInput}></TextInput>
-                <Text>Alcool</Text>
-                <TextInput onChangeText={textInputValueAlcool => this.setState({textInputValueAlcool})} placeholder="Valor do Alcool" keyboardType='numeric' style={styles.textInput}></TextInput>
-                <Button title="Qual melhor?" onPress={this.calculaMelhor}>
+                <Text>{translate('gas')}</Text>
+                <TextInput onChangeText={textInputValueGasolina=>this.setState({textInputValueGasolina})} placeholder={translate('value_gas')} keyboardType='numeric' style={styles.textInput}></TextInput>
+                <Text>{translate('etanol')}</Text>
+                <TextInput onChangeText={textInputValueAlcool => this.setState({textInputValueAlcool})} placeholder={translate('value_etanol')} keyboardType='numeric' style={styles.textInput}></TextInput>
+                <Button title={translate('btn_calculate')} onPress={this.calculaMelhor}>
                 </Button>
                 <Text></Text>
             </View>
