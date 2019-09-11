@@ -11,5 +11,5 @@
 *  Abrir o terminal da linha de comando
   * Navegar até o workspace e abrir a pasta do projeto clonado
   * Utilizar o comando **react-native run-android** ou **react-native run-ios**, a depender do s.o do emulador.
-   *  > Um erro comum de acontecer é o servidor de node não ser inicializado automaticamente com esses comandos, para este caso, se faz necessário abrir outro terminal e utilizar o comando **react-native start** na pasta do projeto e esperar o servidor inicializar, para só então realizar o ultimo passo citado.
+  > Um erro comum de acontecer é o servidor de node não ser inicializado automaticamente com esses comandos, para este caso, se faz necessário abrir outro terminal e utilizar o comando **react-native start** na pasta do projeto e esperar o servidor inicializar, para só então realizar o ultimo passo citado.
   
