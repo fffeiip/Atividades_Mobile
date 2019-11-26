@@ -7,7 +7,7 @@ import {
     TextInput
 } from 'react-native';
 import { Button } from 'react-native-elements'
-import { translate } from './locales'
+import { translate } from '../locales'
 
 export default class GasolinaOuAlcool extends Component {
     constructor(props) {
