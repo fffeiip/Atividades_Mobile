@@ -28,6 +28,7 @@ export default class GasolinaOuAlcool extends Component {
     render() {
         return (
             <View style={styles.viewElements}>
+                <Text style={{fontSize: 40}}></Text>
                 <View >
                     <Text >{translate('gas')}</Text>
                     <TextInput onChangeText={textInputValueGasolina => this.setState({ textInputValueGasolina })} placeholder={translate('value_gas')} keyboardType='numeric' style={styles.textInput}></TextInput>
