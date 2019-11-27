@@ -5,4 +5,5 @@ export default {
     msg_alert: 'Its better to fill with ',
     value_gas: 'Price of gas',
     value_etanol: 'Price of alcohol',
+    title: "Internacionalization"
 }

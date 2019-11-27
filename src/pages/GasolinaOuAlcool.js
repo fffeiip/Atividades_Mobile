@@ -17,7 +17,9 @@ export default class GasolinaOuAlcool extends Component {
             textInputValueGasolina: ''
         }
     }
-
+    static navigationOptions ={
+        title: translate('title')
+    }
     calculaMelhor = () => {
         this.state.textInputValueGasolina = this.state.textInputValueGasolina.replace(',','.')
         this.state.textInputValueAlcool = this.state.textInputValueAlcool.replace(',','.')

@@ -5,4 +5,5 @@ export default {
     msg_alert: 'É melhor abastecer com ',
     value_gas: 'Valor da Gasolina',
     value_etanol: 'Valor do Alcool',
+    title: "Internacionalização"
 }

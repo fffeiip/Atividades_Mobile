@@ -1,35 +1,22 @@
 import React from 'react'
-import { Image } from 'react-native'
-import { createDrawerNavigator } from 'react-navigation'
-import { createStackNavigator } from 'react-navigation'
+import { StatusBar } from 'react-native'
+import AppNavigator from "./routes/AppNavigator"
 
-import GasolinaOuAlcool from "./pages/GasolinaOuAlcool"
+export default class App extends React.Component {
 
-import logo from './assets/instagram.png'
-import Feed from './pages/Feed'
-
-
-const Instagram = createStackNavigator({
-    Feed
-}, {
-    headerLayoutPreset: 'center',
-    defaultNavigationOptions: {
-        headerTitle: <Image source={logo} />,
-        headerStyle: {
-            backgroundColor: "#f5f5f5"
+    constructor(props) {
+        super(props)
+        this.state = {
         }
     }
-})
 
-
-export default createDrawerNavigator({
-    LayoutDeTelas:{
-        screen: Instagram,
-        navigationOptions: {title:'Layout de Telas'}
-    },
-    Internacionalizacao:{
-        screen: GasolinaOuAlcool,
-        navigationOptions: {title:'Internacionalização e Eventos'}
+    render() {
+        return (
+            <>
+                <StatusBar barStyle="dark-content" backgroundColor="#f5f5f5" />
+                <AppNavigator
+                />
+            </>
+        );
     }
-
-})
+}
