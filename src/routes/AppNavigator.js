@@ -12,7 +12,7 @@ const Routes = createStackNavigator({
     Internacionalizacao,
     Instagram
 }, {
-    initialRouteName:'Instagram',
+    initialRouteName:'Menu',
     headerLayoutPreset: 'center',
     defaultNavigationOptions: {
         headerStyle: {

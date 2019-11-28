@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Container, Post, Header, Avatar, Name, Description, Loading } from './styles';
+import { Container, Post, Header, Avatar, PostImage, Name, Description  } from './styles';
 import {
     Image,
     FlatList
@@ -14,33 +14,33 @@ export default class Feed extends Component {
             data: ""
         }
     }
-    requestData = async () => {
-         
-        response = await (fetch(`http://localhost:3000/feed?_expand=authors &_limit-5`))
-        data = await response.json()
-        return data
+    requestData = () => {
+        const response = fetch(`http://localhost:3000/feed?_expand=author&_limit=5&_page=1`)
+        .then(response => response.json())
+        .then(responseJson => this.setState({data: responseJson}))
+        .catch(error => console.log(error))
+        
     }
     componentDidMount() {
-        this.setState({ data: this.requestData() })
+        this.requestData()
     }
     static navigationOptions = {
         headerTitle: <Image source={instagram} />
     }
     render() {
-        console.log(this.state.data)
         return (
             <Container>
                 <FlatList
-                    key="list"
                     data={this.state.data}
-                    keyExtractor={item => String(item.id)}
+                    keyExtractor={item => item.id}
                     renderItem={({ item }) => (
+                        // console.log(item.author)
                         <Post>
                             <Header>
                                 <Avatar source={{ uri: item.author.avatar }} />
                                 <Name>{item.author.name}</Name>
                             </Header>
-
+                        <PostImage ratio={item.aspectRatio} source={{uri: item.image}} />
                             <Description>
                                 <Name>{item.author.name}</Name> {item.description}
                             </Description>
