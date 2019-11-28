@@ -30,7 +30,7 @@ export default class Menu extends Component {
                     ...styles.button,
                     backgroundColor: "#1fab0b",
                 }}
-                // onPress={()=> navigate("Api")}
+                onPress={()=> navigate("Api")}
                 >
                     <Text style={styles.texto}>Consumo de API</Text>
                 </TouchableOpacity>
