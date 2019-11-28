@@ -2,7 +2,7 @@
 - [x] TASK #i01    ATIVIDADE: INTERNACIONALIZAÇÃO E EVENTOS
 - [x] TASK #i02    ATIVIDADE: LAYOUT DE TELAS
 - [x] TASK #i03    ATIVIDADE: INTERAÇÃO ENTRE ACTIVITIES
-- [ ] TASK #i04    ATIVIDADE: APP CONSUMINDO API
+- [x] TASK #i04    ATIVIDADE: APP CONSUMINDO API
 
 ### Para rodar o app pela cli:
 * Seguir a [documentação](https://facebook.github.io/react-native/docs/getting-started) do framework e realizar set-up do ambiente de desenvolvimento. 
