@@ -28,15 +28,18 @@ export default class Menu extends Component {
                 </TouchableOpacity>
                 <TouchableOpacity style={{
                     ...styles.button,
-                    backgroundColor: "#1ffb0b",
-                }}>
+                    backgroundColor: "#1fab0b",
+                }}
+                // onPress={()=> navigate("Api")}
+                >
                     <Text style={styles.texto}>Consumo de API</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={{
                     ...styles.button,
                     backgroundColor: "#1f000b"
-                }}>
-                    <Text style={styles.texto}>Atividade 2</Text>
+                }}
+                onPress={ () => navigate("InteracaoActivities")}>
+                    <Text style={styles.texto}>Interação Activities</Text>
                 </TouchableOpacity>
             </View>
         )

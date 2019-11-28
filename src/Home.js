@@ -7,6 +7,7 @@ export default class App extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
+            curso: ''
         }
     }
 
@@ -15,6 +16,9 @@ export default class App extends React.Component {
             <>
                 <StatusBar barStyle="dark-content" backgroundColor="#f5f5f5" />
                 <AppNavigator
+                    screenProps={{
+                        curso: this.state.curso
+                    }}
                 />
             </>
         );

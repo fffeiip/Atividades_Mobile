@@ -2,6 +2,8 @@ import { createStackNavigator } from 'react-navigation-stack'
 import { createAppContainer} from 'react-navigation'
 import Internacionalizacao from "../pages/GasolinaOuAlcool"
 import Menu from "../pages/Menu"
+import InteracaoActivities from "../pages/InteracaoActivies/SuporteLaboratorio"
+import SelecionaCurso from "../pages/InteracaoActivies/SelecionaCurso"
 
 
 import Instagram from '../pages/Feed'
@@ -10,7 +12,9 @@ import Instagram from '../pages/Feed'
 const Routes = createStackNavigator({
     Menu,
     Internacionalizacao,
-    Instagram
+    Instagram,
+    InteracaoActivities,
+    SelecionaCurso
 }, {
     initialRouteName:'Menu',
     headerLayoutPreset: 'center',
