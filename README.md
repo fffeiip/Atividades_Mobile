@@ -16,3 +16,10 @@
   * Utilizar o comando **yarn react-native run-android** ou **yarn react-native run-ios**, a depender do s.o do emulador.
   > Um erro comum de acontecer é o servidor de node não ser inicializado automaticamente com esses comandos, para este caso, se faz necessário abrir outro terminal e utilizar o comando **yarn start** na pasta do projeto e esperar o servidor inicializar, para só então realizar o ultimo passo citado.
   
+## Intruções de Uso
+
+#### Layout de Telas
+Neste app foi utilizado um json-server, logo para que a aplicação funcione corretamente alguns passos adicionas se fazem necessários:
+* Na pasta raiz do projeto, rodar o comando **yarn json-server server.json -d 1000 -w**
+###### Para emulador android: 
+* Alterar a configuração padrão de conexão tcp do adb com o comando **adb reverse tcp:3000 tcp:3000**
