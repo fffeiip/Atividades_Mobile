@@ -7,7 +7,7 @@ import {
     TextInput
 } from 'react-native';
 import { Button } from 'react-native-elements'
-import { translate } from './locales'
+import { translate } from '../locales'
 
 export default class GasolinaOuAlcool extends Component {
     constructor(props) {
@@ -17,7 +17,9 @@ export default class GasolinaOuAlcool extends Component {
             textInputValueGasolina: ''
         }
     }
-
+    static navigationOptions ={
+        title: translate('title')
+    }
     calculaMelhor = () => {
         this.state.textInputValueGasolina = this.state.textInputValueGasolina.replace(',','.')
         this.state.textInputValueAlcool = this.state.textInputValueAlcool.replace(',','.')
@@ -28,6 +30,7 @@ export default class GasolinaOuAlcool extends Component {
     render() {
         return (
             <View style={styles.viewElements}>
+                <Text style={{fontSize: 40}}></Text>
                 <View >
                     <Text >{translate('gas')}</Text>
                     <TextInput onChangeText={textInputValueGasolina => this.setState({ textInputValueGasolina })} placeholder={translate('value_gas')} keyboardType='numeric' style={styles.textInput}></TextInput>
