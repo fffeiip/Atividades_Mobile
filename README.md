@@ -1,6 +1,6 @@
 # Atividades Mobile - React-Native
 - [x] TASK #i01    ATIVIDADE: INTERNACIONALIZAÇÃO E EVENTOS
-- [ ] TASK #i02    ATIVIDADE: LAYOUT DE TELAS
+- [x] TASK #i02    ATIVIDADE: LAYOUT DE TELAS
 - [ ] TASK #i03    ATIVIDADE: INTERAÇÃO ENTRE ACTIVITIES
 - [ ] TASK #i04    ATIVIDADE: APP CONSUMINDO API
 
@@ -12,7 +12,7 @@
 * Inicializar o emulador
 *  Abrir o terminal da linha de comando
   * Navegar até o workspace e abrir a pasta do projeto clonado
-  * Instalar as dependências do projeto, utilizando o comando **npm install** ou **npm i**
-  * Utilizar o comando **react-native run-android** ou **react-native run-ios**, a depender do s.o do emulador.
-  > Um erro comum de acontecer é o servidor de node não ser inicializado automaticamente com esses comandos, para este caso, se faz necessário abrir outro terminal e utilizar o comando **react-native start** na pasta do projeto e esperar o servidor inicializar, para só então realizar o ultimo passo citado.
+  * Instalar as dependências do projeto, utilizando o comando **yarn install** (caso não possua, instale o [yarn](https://yarnpkg.com/lang/en/docs/install))
+  * Utilizar o comando **yarn react-native run-android** ou **yarn react-native run-ios**, a depender do s.o do emulador.
+  > Um erro comum de acontecer é o servidor de node não ser inicializado automaticamente com esses comandos, para este caso, se faz necessário abrir outro terminal e utilizar o comando **yarn start** na pasta do projeto e esperar o servidor inicializar, para só então realizar o ultimo passo citado.
   
